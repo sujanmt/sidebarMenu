@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
 import 'package:sidebarx/src/widgets/widgets.dart';
 
+enum FooterFitType {
+  /// The footer will fit its content size.
+  fit,
+
+  /// The footer will expand to occupy available space.
+  expand,
+}
+
 class SidebarX extends StatefulWidget {
   const SidebarX({
     Key? key,
@@ -17,6 +25,7 @@ class SidebarX extends StatefulWidget {
     this.showToggleButton = true,
     this.headerDivider,
     this.footerDivider,
+    this.footerFitType = FooterFitType.expand,
     this.animationDuration = const Duration(milliseconds: 300),
     this.collapseIcon = Icons.arrow_back_ios_new,
     this.extendIcon = Icons.arrow_forward_ios,
@@ -31,6 +40,7 @@ class SidebarX extends StatefulWidget {
 
   final List<SidebarXItem> items;
   final List<SidebarXItem> footerItems;
+  final FooterFitType footerFitType;
 
   /// Controller to interact with Sidebar from code
   final SidebarXController controller;
@@ -86,7 +96,7 @@ class _SidebarXState extends State<SidebarX>
       _animationController?.reverse();
     }
     widget.controller.extendStream.listen(
-      (extended) {
+          (extended) {
         if (_animationController?.isCompleted ?? false) {
           _animationController?.reverse();
         } else {
@@ -126,7 +136,7 @@ class _SidebarXState extends State<SidebarX>
                 child: ListView.separated(
                   itemCount: widget.items.length,
                   separatorBuilder: widget.separatorBuilder ??
-                      (_, __) => const SizedBox(height: 8),
+                          (_, __) => const SizedBox(height: 8),
                   itemBuilder: (context, index) {
                     final item = widget.items[index];
                     return SidebarXCell(
@@ -148,11 +158,13 @@ class _SidebarXState extends State<SidebarX>
                   const SizedBox(),
               if (widget.footerItems.isNotEmpty)
                 Expanded(
+                  flex: widget.footerFitType == FooterFitType.expand ? 1 : 0,
                   child: ListView.separated(
+                    shrinkWrap: widget.footerFitType == FooterFitType.fit,
                     reverse: true,
                     itemCount: widget.footerItems.length,
                     separatorBuilder: widget.separatorBuilder ??
-                        (_, __) => const SizedBox(height: 8),
+                            (_, __) => const SizedBox(height: 8),
                     itemBuilder: (context, index) {
                       final item = widget.footerItems.reversed.toList()[index];
                       return SidebarXCell(
@@ -214,13 +226,11 @@ class _SidebarXState extends State<SidebarX>
     item.onSecondaryTap?.call();
   }
 
-  Widget _buildToggleButton(
-    SidebarXTheme sidebarXTheme,
-    IconData collapseIcon,
-    IconData extendIcon,
-  ) {
+  Widget _buildToggleButton(SidebarXTheme sidebarXTheme,
+      IconData collapseIcon,
+      IconData extendIcon,) {
     final buildedToggleButton =
-        widget.toggleButtonBuilder?.call(context, widget.controller.extended);
+    widget.toggleButtonBuilder?.call(context, widget.controller.extended);
     if (buildedToggleButton != null) {
       return buildedToggleButton;
     }
