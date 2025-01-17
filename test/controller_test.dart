@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sidebarx/sidebarx.dart';
+import 'package:sidebarMenu/sidebarx.dart';
 
 void main() {
   group('SidebarXController', () {

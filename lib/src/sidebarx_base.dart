@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sidebarx/sidebarx.dart';
-import 'package:sidebarx/src/widgets/widgets.dart';
+import 'package:sidebarMenu/sidebarx.dart';
+import 'package:sidebarMenu/src/widgets/widgets.dart';
 
 enum FooterFitType {
   /// The footer will fit its content size.

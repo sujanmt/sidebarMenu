@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sidebarx/sidebarx.dart';
+import 'package:sidebarMenu/sidebarx.dart';
 
 class SidebarXCell extends StatefulWidget {
   const SidebarXCell({

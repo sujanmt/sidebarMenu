@@ -8,7 +8,7 @@
 
 | Mobile | Desktop | Web |
 | :------------: | :------------: | :------------: |
-| ![Image](https://github.com/Frezyx/sidebarx/blob/main/example/repo/example_mobile_small.gif?raw=true) | ![Image](https://github.com/Frezyx/sidebarx/blob/main/example/repo/example.gif?raw=true) | ![Image](https://github.com/Frezyx/sidebarx/blob/main/example/repo/example_web.gif?raw=true) |
+| ![Image](https://github.com/Frezyx/sidebarMenu/blob/main/example/repo/example_mobile_small.gif?raw=true) | ![Image](https://github.com/Frezyx/sidebarMenu/blob/main/example/repo/example.gif?raw=true) | ![Image](https://github.com/Frezyx/sidebarMenu/blob/main/example/repo/example_web.gif?raw=true) |
 
 <p align="center">
   <a href="https://pub.dev/packages/sidebarx"><img src="https://img.shields.io/pub/v/sidebarx.svg" alt="Pub"></a>
@@ -17,9 +17,9 @@
   <a href="https://github.com/Frezyx/sidebarx"><img src="https://hits.dwyl.com/Frezyx/sidebarx.svg?style=flat" alt="Repository views"></a>
 </p>
 <p align="center">
-  <a href="https://pub.dev/packages/sidebarx/score"><img src="https://badges.bar/sidebarx/likes" alt="Pub likes"></a>
-  <a href="https://pub.dev/packages/sidebarx/score"><img src="https://badges.bar/sidebarx/popularity" alt="Pub popularity"></a>
-  <a href="https://pub.dev/packages/sidebarx/score"><img src="https://badges.bar/sidebarx/pub%20points" alt="Pub points"></a>
+  <a href="https://pub.dev/packages/sidebarMenu/score"><img src="https://badges.bar/sidebarMenu/likes" alt="Pub likes"></a>
+  <a href="https://pub.dev/packages/sidebarMenu/score"><img src="https://badges.bar/sidebarMenu/popularity" alt="Pub popularity"></a>
+  <a href="https://pub.dev/packages/sidebarMenu/score"><img src="https://badges.bar/sidebarMenu/pub%20points" alt="Pub points"></a>
 </p>
 
 ## Getting started
@@ -35,7 +35,7 @@ dependencies:
 ### Add import package
 
 ```dart
-import 'package:sidebarx/sidebarx.dart';
+import 'package:sidebarMenu/sidebarx.dart';
 ```
 
 ## Easy to use
@@ -81,7 +81,7 @@ Thank you for support ❤️
 <br>
 <div align="center" >
   <p>Thanks to all contributors of this package</p>
-  <a href="https://github.com/Frezyx/sidebarx/graphs/contributors">
+  <a href="https://github.com/Frezyx/sidebarMenu/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=Frezyx/sidebarx" />
   </a>
 </div>
